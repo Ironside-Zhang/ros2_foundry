@@ -17,8 +17,18 @@ install(DIRECTORY urdf
   DESTINATION share/${PROJECT_NAME})
 install(DIRECTORY rviz
   DESTINATION share/${PROJECT_NAME})
+install(DIRECTORY config
+  DESTINATION share/${PROJECT_NAME})
+
+# ==================================================== #
+# == FINAL FIX: Added this line to install SDF files  == #
+# ==================================================== #
+install(DIRECTORY sdf
+  DESTINATION share/${PROJECT_NAME})
+# ==================================================== #
+
 install(DIRECTORY meshes
   DESTINATION share/${PROJECT_NAME}
-  OPTIONAL) # Meshes are optional for now
+  OPTIONAL)
 
 ament_package()
